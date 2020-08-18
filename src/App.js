@@ -2,11 +2,13 @@ import React from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Navbar from './componets/layout/Navbar';
 import Index from './componets/layout/Index';
+import {Provider} from './context';
 
 import './App.css';
 
 function App() {
   return (
+    <Provider>
     <Router>
     <React.Fragment>
       <Navbar/>
@@ -17,6 +19,7 @@ function App() {
       </div>
     </React.Fragment>
     </Router>
+    </Provider>
   );
 }
 
