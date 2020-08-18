@@ -1,11 +1,22 @@
 import React from 'react';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import Navbar from './componets/layout/Navbar';
+import Index from './componets/layout/Index';
+
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello</h1>
-    </div>
+    <Router>
+    <React.Fragment>
+      <Navbar/>
+      <div className="container">
+        <Switch>
+          <Route exact path="/" component={Index}/>
+        </Switch>
+      </div>
+    </React.Fragment>
+    </Router>
   );
 }
 
